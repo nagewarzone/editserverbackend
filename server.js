@@ -24,8 +24,8 @@ function authMiddleware(req, res, next) {
 }
 
 const dbConfig = {
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
+  user: 'sa',
+  password: 'Nage12345',
   server: process.env.DB_SERVER,
   database: process.env.DB_NAME,
   options: {
