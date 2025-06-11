@@ -1,0 +1,17 @@
+{
+  "name": "nage-backend",
+  "version": "1.0.0",
+  "description": "N-Age backend API server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "mssql": "^11.5.1"
+  }
+}
