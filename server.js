@@ -8,8 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 // ENV-like config (ใช้ dotenv ก็ได้)
-const ADMIN_PASSWORD = 'supersecret';
-const AUTH_TOKEN = 'my-secure-token';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const AUTH_TOKEN = process.env.AUTH_TOKEN;
+
 
 // Auth middleware
 function authMiddleware(req, res, next) {
