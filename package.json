@@ -1,10 +1,10 @@
 {
   "name": "nage-backend",
   "version": "1.0.0",
-  "description": "Backend for N-Age Item Mall",
-  "main": "index.js",
+  "description": "Backend for new server",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
