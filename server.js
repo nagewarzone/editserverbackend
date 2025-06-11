@@ -2,6 +2,7 @@ const express = require('express');
 const sql = require('mssql');
 const cors = require('cors');
 const app = express();
+const axios = require('axios');
 const port = 3000;
 
 app.use(cors());
@@ -32,7 +33,16 @@ const dbConfig = {
     trustServerCertificate: true,
   },
 };
-
+// เพิ่ม route สำหรับเช็ค public IP
+app.get('/api/myip', async (req, res) => {
+  try {
+    const response = await axios.get('https://api.ipify.org?format=json');
+    res.json({ ip: response.data.ip });
+  } catch (error) {
+    console.error('Failed to get public IP:', error);
+    res.status(500).json({ error: 'Failed to get public IP' });
+  }
+});
 // ✅ LOGIN endpoint
 app.post('/api/login', (req, res) => {
   const { password } = req.body;
