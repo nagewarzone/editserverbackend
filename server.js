@@ -43,7 +43,7 @@ app.post('/api/login', (req, res) => {
 });
 
 // ✅ GET: item list — No auth
-app.get('/api/items', async (req, res) => {
+app.get('/api/items', authMiddleware, async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const search = req.query.search || '';
   const pageSize = 50;
